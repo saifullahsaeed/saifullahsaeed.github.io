@@ -1,0 +1,23 @@
+* {
+    padding: 0%;
+    margin: 0;
+}
+
+nav {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    position: absolute;
+    width: 100%;
+    background-color: antiquewhite;
+    align-items: center;
+    text-align: center;
+    ul {
+        display: inline;
+        list-style: none;
+        li {
+            text-decoration: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}

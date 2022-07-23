@@ -14,24 +14,34 @@
             "visible": true
         },
         "summary": "Experienced Web Developer adept in all stages of advanced web development. Knowledgeable in user interface, testing, and debugging processes.   Able to effectively self-manage during independent projects, as well as collaborate as part of a productive team.  Proficient in an assortment of technologies, including JavaScript , PHP , React , Mongo db, MySQL, and Blockchain. Experienced in managing employee and community programs, and dedicated to successfully directing business operations.",
+        "about": "My name is Saifullah saeed. I am Full Stack Web developer with backend heavy. I am Working in the industry from past 6 years as a freelancer and also done some contract projects with direct clients from Facebook and Linkdin.I have Experience in Node,PHP, Python and C++ My major job is to develop indutry level web applicattions. I have also spent time Studying Cyber security for some time therefor i have quite a good amout of Knowledge about the web applicattions security and also have Intermediate lavel Knowledge about Flutter ",
         "website": "saifullahsaeed.github.io",
         "headline": "Full Stack Web Developer",
         "location": {
             "city": "Haripur",
-            "region": "",
+            "region": "KPK",
             "address": "",
             "country": "Pakistan",
-            "postalCode": "22750"
+            "postalCode": "22620"
         },
+        "NoOfProjects": "35",
+        "NoOfClients": "50",
+        "NoOfReviews": "150+",
+        "yearsOfExperience": "6",
         "profiles": [
             {
                 "network": "Linkdin",
                 "username": "saifullah-saeed-875100195",
                 "url": "https://www.linkedin.com/in/saifullah-saeed-875100195/",
                 "id": "5937ffca-4a40-4cf5-b150-322a64d072d5"
+            },
+            {
+                "network": "Github",
+                "username": "saifullahsaeed",
+                "url": "https://github.com.com/saifullahsaeed"
             }
         ],
-        "birthdate": ""
+        "birthdate": "13/7/2002"
     },
     "sections": {
         "work": {
@@ -43,7 +53,7 @@
                     "name": "Algo Alliance",
                     "position": "Backend Developer",
                     "date": {
-                        "start": "2018-07-12T19:00:00.000Z",
+                        "start": "2022-01",
                         "end": ""
                     },
                     "url": "https://algoalliance.io/",
@@ -54,8 +64,8 @@
                     "name": "Fiverr",
                     "position": "Full Stack Developer ",
                     "date": {
-                        "start": "",
-                        "end": ""
+                        "start": "2018-07",
+                        "end": "2022-01"
                     },
                     "url": "https://fiverr.com/",
                     "summary": "Worked as a full stack developer in more then 50 projects in past 4 years as a freelancer.\nWorked with Frameworks like Django, Laravel, Codeignitor, Next.js, react js, Express js ",
@@ -166,7 +176,9 @@
             "id": "interests",
             "name": "Interests",
             "type": "basic",
-            "items": [],
+            "items": [
+
+            ],
             "columns": 2,
             "visible": true
         },

@@ -131,7 +131,20 @@
             "id": "projects",
             "name": "Projects",
             "type": "basic",
-            "items": [],
+            "items": [
+                {
+                    "name": "Online Store API",
+                    "Technology": "Laravel",
+                    "urls":[
+                        {
+                            "url": "https://github.com/saifullahsaeed/food-api/tree/master",
+                            "type": "Github"
+                        }
+
+                    ] 
+                }
+                
+            ],
             "columns": 2,
             "visible": true
         },

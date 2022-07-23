@@ -1,6 +1,6 @@
 (function () {
     [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             document.querySelector(".active-btn").classList.remove("active-btn");
             this.classList.add("active-btn");
             document.querySelector(".active").classList.remove("active");
@@ -16,9 +16,7 @@ $(document).ready(function () {
         $("body").toggleClass("light-mode");
     }
     );
-    //get data from json file in data/RxResume.json
     $.getJSON("data/RxResume_JSONExport_FsM-pxr5YhuWW7F9cG7cQ.json", function (data) {
-       //add data to html
         $("#name-data").text(data.basics.name);
         $("#headline-data").text(data.basics.headline);
         $("#summery-data").text(data.basics.summary);
@@ -29,7 +27,7 @@ $(document).ready(function () {
         $("#website-data").text(data.basics.website);
         $("#location-data").text(data.basics.location.city);
         $("#address-data").text(data.basics.location.address);
-        $("#country-data").text(data.basics.location.countryCode);
+        $("#country-data").text(data.basics.location.country);
         $("#postal-code-data").text(data.basics.location.postalCode);
         $("#Total-projects").text(data.basics.NoOfProjects);
         $("#Total-reviews").text(data.basics.NoOfReviews);
@@ -47,13 +45,12 @@ $(document).ready(function () {
                 </div>
             </div>`
             );
-        
+
         });
         data.sections.work.items.forEach(element => {
-            //get only month and year from date
             var dateStart = element.date.start;
             var dateEnd = element.date.end;
-            if(dateEnd == ""){
+            if (dateEnd == "") {
                 dateEnd = "Present";
             }
 
@@ -78,7 +75,7 @@ $(document).ready(function () {
             if (dateEnd == "") {
                 dateEnd = "Present";
             }
-            if(dateEnd == ""){
+            if (dateEnd == "") {
                 dateEnd = "Present";
             }
             $("#timeline").append(
@@ -95,7 +92,31 @@ $(document).ready(function () {
             );
         }
         );
+        data.sections.projects.items.forEach(element => {
+            $("#projects").append(
+                `<div class="portfolio-item">
+                <div class="image">
+                    <img src="img/port1.jpg" alt="">
+                </div>
+                <div class="hover-items">
+                    <h3>${element.name}</h3>
+                    <div class="icons" >
+                        <a href="${element.urls[0].url}" class="icon">
+                            <i class="fab fa-${element.urls[0].type.toLowerCase()}"></i>
+                        </a>
 
+                    </div>
+                </div>
+            </div>`
+            );
+        }
+        );
 
+        data.sections.languages.items.forEach(element => {
+            $("#language-data").append(element.name + " : ");
+        }
+        );
+        //send ip address to email 
+        
     });
 });

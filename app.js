@@ -1,16 +1,16 @@
-(function () {
-    [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function () {
-            document.querySelector(".active-btn").classList.remove("active-btn");
-            this.classList.add("active-btn");
-            document.querySelector(".active").classList.remove("active");
-            document.getElementById(button.dataset.id).classList.add("active");
-        })
+
+$(document).ready(function () {
+    $(".control").click(function () {
+        $(".active-btn").removeClass("active-btn");
+        $(this).addClass("active-btn");
+        $(".active").removeClass("active");
+        $("#" + $(this).data("id")).addClass("active");
     });
-    document.querySelector(".theme-btn").addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-    })
-})();
+    $(".theme-btn").click(function () {
+        $("body").toggleClass("light-mode");
+    });
+}
+);
 $(document).ready(function () {
     //get data from json file in data/RxResume.json
     $.getJSON("data/RxResume_JSONExport_FsM-pxr5YhuWW7F9cG7cQ.json", function (data) {

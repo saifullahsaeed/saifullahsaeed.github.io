@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,15 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="main-content">
     <div class="preloader"></div>
     <header class="container header active" id="home">
@@ -50,12 +56,12 @@
                 <div class="left-about">
                     <h4>Information About me</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Eveniet labore nihil obcaecati consequatur. Debitis error doloremque, 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eveniet labore nihil obcaecati consequatur. Debitis error doloremque,
                         vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
-                        delectus dolore fugiat exercitationem a, 
+                        delectus dolore fugiat exercitationem a,
                         ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                         Harum non necessitatibus deleniti eum soluta.
                     </p>
                     <div class="btn-con">
@@ -371,7 +377,7 @@
                                 How to Create Your Own Website
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Doloribus natus voluptas, eos obcaecati recusandae amet?
                             </p>
                         </div>
@@ -383,7 +389,7 @@
                                 How to Become an Expert in Web Design
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Doloribus natus voluptas, eos obcaecati recusandae amet?
                             </p>
                         </div>
@@ -395,7 +401,7 @@
                                 Become a Web Designer in 10 Days
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Doloribus natus voluptas, eos obcaecati recusandae amet?
                             </p>
                         </div>
@@ -407,7 +413,7 @@
                                 Debbuging made easy with Web Inspector
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Doloribus natus voluptas, eos obcaecati recusandae amet?
                             </p>
                         </div>
@@ -419,7 +425,7 @@
                                 Get started with Web Design and UI Design
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Doloribus natus voluptas, eos obcaecati recusandae amet?
                             </p>
                         </div>
@@ -431,7 +437,7 @@
                                 This is what you need to know about Web Design
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Doloribus natus voluptas, eos obcaecati recusandae amet?
                             </p>
                         </div>
@@ -448,7 +454,7 @@
                     <div class="left-contact">
                         <h4>Contact me here</h4>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             In, laborum numquam? Quam excepturi perspiciatis quas quasi.
                         </p>
                         <div class="contact-info">
@@ -541,7 +547,7 @@
     </main>
 
     <div class="controls">
-        <div class="control active-btn" data-id="home" >
+        <div class="control active-btn" data-id="home">
             <i class="fas fa-home"></i>
         </div>
         <div class="control" data-id="about">
@@ -560,6 +566,23 @@
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
+    <Script>
+        (function () {
+            [...document.querySelectorAll(".control")].forEach(button => {
+                button.addEventListener("click", function () {
+                    document.querySelector(".active-btn").classList.remove("active-btn");
+                    this.classList.add("active-btn");
+                    document.querySelector(".active").classList.remove("active");
+                    document.getElementById(button.dataset.id).classList.add("active");
+                })
+            });
+            document.querySelector(".theme-btn").addEventListener("click", () => {
+                document.body.classList.toggle("light-mode");
+            })
+        })();
+
+    </Script>
     <script src="app.js"></script>
 </body>
+
 </html>

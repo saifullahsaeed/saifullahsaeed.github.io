@@ -16,5 +16,8 @@ $(document).ready(function () {
     $.getJSON("data/RxResume_JSONExport_FsM-pxr5YhuWW7F9cG7cQ.json", function (data) {
        //add data to html
         $("#name-data").text(data.basics.name);
+        $("#headline-data").text(data.basics.headline);
+        $("#summery-data").text(data.basics.summary);
+        $("#image-data").attr("src", data.basics.photo.url);
     });
 });

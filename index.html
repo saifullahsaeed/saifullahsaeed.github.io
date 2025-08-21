@@ -2,181 +2,244 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saifullah Saeed - Software Engineer</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- Modern Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Latest Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Modern Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Saifullah Saeed - Senior Software Engineer with 6 years of experience in full-stack development, mobile apps, and AI integration">
+    <meta name="keywords" content="Software Engineer, Full Stack Developer, React, Node.js, Flutter, Django, AI, Machine Learning">
+    <meta name="author" content="Saifullah Saeed">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Saifullah Saeed - Software Engineer">
+    <meta property="og:description" content="Senior Software Engineer with expertise in modern web and mobile development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saifullahsaeed.github.io">
 </head>
 
 <body>
-    <div class="resume-container" id="resume">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="header-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="img/mypic.jpg" alt="Saifullah Saeed" class="profile-pic">
-                    </div>
-                    <div class="profile-info">
-                        <h1 class="name">Saifullah Saeed</h1>
-                        <h2 class="title">Software Engineer</h2>
-                        <p class="summary">
-                            Software Engineer with 6 years of experience in designing, developing, and deploying scalable web and mobile applications. Skilled in modern frameworks including Node.js, React.js, Next.js, NestJS, and Django, with hands-on expertise in Flutter for cross-platform mobile apps. Strong background in CI/CD pipelines, GitHub Actions, and cloud deployments.
-                        </p>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Saifullah</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resume" class="nav-link resume-btn">Resume</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Saifullah Saeed</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Senior Software Engineer</h2>
+                    <p class="hero-description">
+                        Crafting exceptional digital experiences with 6 years of expertise in full-stack development, 
+                        mobile applications, and AI integration. Passionate about building scalable solutions that drive business growth.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>saifullahsaeed.work@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+966 568584158</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>As Sulay, Riyadh, Saudi Arabia</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-globe"></i>
-                        <span>https://saifullahsaeed.github.io</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-id-card"></i>
-                        <span>Pakistani | LG5972171</span>
+                <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="image-container">
+                        <img src="img/mypic.jpg" alt="Saifullah Saeed" class="profile-image">
+                        <div class="image-overlay"></div>
+                        <div class="floating-card">
+                            <i class="fas fa-code"></i>
+                            <span>6+ Years Experience</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="content-grid">
-                <!-- Left Column -->
-                <div class="left-column">
-                    <!-- Skills Section -->
-                    <section class="section">
-                        <h3 class="section-title">
-                            <i class="fas fa-code"></i>
-                            Technical Skills
-                        </h3>
-                        
-                        <div class="skill-category">
-                            <h4>Javascript / Typescript</h4>
-                            <ul class="skill-list">
-                                <li>React.js / Next.js</li>
-                                <li>NestJS (Microservices)</li>
-                                <li>Express.js (REST and GraphQL)</li>
-                                <li>Remix (Shopify apps)</li>
-                            </ul>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about technology and innovation</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="800">
+                    <h3>Who I Am</h3>
+                    <p>
+                        I'm a Senior Software Engineer with 6 years of experience designing, developing, and deploying 
+                        scalable web and mobile applications. My expertise spans modern frameworks including React.js, 
+                        Next.js, NestJS, Django, and Flutter, with a strong focus on AI integration and cloud deployments.
+                    </p>
+                    <p>
+                        Currently leading development at Nyoko Inc, I manage teams, architect solutions, and deliver 
+                        high-quality products that drive business success. I'm passionate about clean code, performance, 
+                        and creating user experiences that make a difference.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Years Experience</div>
                         </div>
-
-                        <div class="skill-category">
-                            <h4>Flutter</h4>
-                            <ul class="skill-list">
-                                <li>GetX (State Management)</li>
-                                <li>Provider (Custom State Management)</li>
-                                <li>Workmanager (Background Management)</li>
-                            </ul>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
                         </div>
-
-                        <div class="skill-category">
-                            <h4>AI / Machine Learning</h4>
-                            <ul class="skill-list">
-                                <li>Basic Regression & Classification Models</li>
-                                <li>Neural Networks (Foundational Understanding)</li>
-                                <li>Data Preprocessing (Python, Pandas, NumPy)</li>
-                                <li>LLM APIs (Function Calling & Workflow Automation)</li>
-                                <li>Prompt Engineering & AI-assisted Applications</li>
-                            </ul>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Technologies</div>
                         </div>
-
-                        <div class="skill-category">
-                            <h4>Python</h4>
-                            <ul class="skill-list">
-                                <li>Django (Web Development)</li>
-                                <li>Django REST Framework (API Development)</li>
-                                <li>RESTful APIs for Web & Mobile Apps</li>
-                                <li>Web Scraping & Automation (BeautifulSoup, Requests, Selenium)</li>
-                                <li>CLI Tools & Scripting</li>
-                            </ul>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Team Leadership</div>
                         </div>
-
-                        <div class="skill-category">
-                            <h4>CI/CD</h4>
-                            <ul class="skill-list">
-                                <li>GitHub Actions (Automated Workflows & Deployments)</li>
-                                <li>Docker (Containerization & Deployment)</li>
-                                <li>AWS / Firebase (Cloud Deployments & Hosting)</li>
-                                <li>Automated Testing & Linting Pipelines</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <!-- Languages Section -->
-                    <section class="section">
-                        <h3 class="section-title">
-                            <i class="fas fa-language"></i>
-                            Languages
-                        </h3>
-                        <div class="languages">
-                            <div class="language-item">
-                                <span class="language-name">English</span>
-                                <span class="language-level">Fluent</span>
-                            </div>
-                            <div class="language-item">
-                                <span class="language-name">Urdu</span>
-                                <span class="language-level">Native/Bilingual</span>
-                            </div>
-                            <div class="language-item">
-                                <span class="language-name">Hindi</span>
-                                <span class="language-level">Fluent</span>
-                            </div>
-                            <div class="language-item">
-                                <span class="language-name">Arabic</span>
-                                <span class="language-level">Basic</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Hobbies Section -->
-                    <section class="section">
-                        <h3 class="section-title">
-                            <i class="fas fa-heart"></i>
-                            Hobbies
-                        </h3>
-                        <div class="hobbies">
-                            <span class="hobby-item">Reading SciFi Books and Novels</span>
-                            <span class="hobby-item">Playing Chess</span>
-                        </div>
-                    </section>
+                    </div>
                 </div>
-
-                <!-- Right Column -->
-                <div class="right-column">
-                    <!-- Professional Experience -->
-                    <section class="section">
-                        <h3 class="section-title">
-                            <i class="fas fa-briefcase"></i>
-                            Professional Experience
-                        </h3>
-                        
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h4 class="job-title">Senior Software Developer</h4>
-                                <div class="company-info">
-                                    <span class="company-name">Nyoko Inc</span>
-                                    <span class="location">Doha, Qatar</span>
-                                </div>
-                                <div class="duration">07/2022 – Present</div>
+                
+                <div class="skills-section" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <h3>Technical Expertise</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4><i class="fab fa-js-square"></i> Frontend</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Next.js</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">Tailwind CSS</span>
                             </div>
-                            <ul class="achievements">
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-server"></i> Backend</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">NestJS</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">Express.js</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-mobile-alt"></i> Mobile</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">GetX</span>
+                                <span class="skill-tag">Provider</span>
+                                <span class="skill-tag">Workmanager</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-brain"></i> AI & ML</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">LLM APIs</span>
+                                <span class="skill-tag">Neural Networks</span>
+                                <span class="skill-tag">Data Preprocessing</span>
+                                <span class="skill-tag">Prompt Engineering</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fab fa-python"></i> Python</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Django REST</span>
+                                <span class="skill-tag">Web Scraping</span>
+                                <span class="skill-tag">Automation</span>
+                                <span class="skill-tag">CLI Tools</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-cloud"></i> DevOps</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">GitHub Actions</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">My journey in software development</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-duration="800">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Software Developer</h3>
+                            <div class="company-info">
+                                <span class="company-name">Nyoko Inc</span>
+                                <span class="location">Doha, Qatar</span>
+                            </div>
+                            <div class="duration">July 2022 - Present</div>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
                                 <li>Led backend development using Django & Django REST Framework for web and mobile applications</li>
                                 <li>Built and deployed cross-platform mobile apps with Flutter, integrating APIs and third-party services</li>
                                 <li>Managed a team of 4 developers, overseeing code quality, feature delivery, and task coordination</li>
@@ -184,102 +247,413 @@
                                 <li>Collaborated with stakeholders to translate requirements into technical solutions and shipped product updates on schedule</li>
                             </ul>
                         </div>
-
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h4 class="job-title">MERN Stack Developer</h4>
-                                <div class="company-info">
-                                    <span class="company-name">Turing</span>
-                                    <span class="location">Remote</span>
-                                </div>
-                                <div class="duration">09/2022 – 10/2023</div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>MERN Stack Developer</h3>
+                            <div class="company-info">
+                                <span class="company-name">Turing</span>
+                                <span class="location">Remote</span>
                             </div>
-                            <ul class="achievements">
-                                <li>Developed full-stack features for a client using Next.js, handling both frontend and backend responsibilities for web and mobile interfaces</li>
-                                <li>Integrated Solidity smart contracts within the application workflow, enabling seamless blockchain interactions and secure logic execution</li>
-                                <li>Collaborated with stakeholders to translate requirements into functional components, maintaining quality, responsiveness, and clarity in delivery</li>
+                            <div class="duration">September 2022 - October 2023</div>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed full-stack features for a client using Next.js, handling both frontend and backend responsibilities</li>
+                                <li>Integrated Solidity smart contracts within the application workflow, enabling seamless blockchain interactions</li>
+                                <li>Collaborated with stakeholders to translate requirements into functional components, maintaining quality and responsiveness</li>
                             </ul>
                         </div>
-
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <h4 class="job-title">Freelance Web Developer</h4>
-                                <div class="company-info">
-                                    <span class="company-name">Fiverr</span>
-                                    <span class="location">Remote</span>
-                                </div>
-                                <div class="duration">Freelance</div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Solidity</span>
+                            <span class="tech-tag">Blockchain</span>
+                            <span class="tech-tag">Full-Stack</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Freelance Web Developer</h3>
+                            <div class="company-info">
+                                <span class="company-name">Fiverr</span>
+                                <span class="location">Remote</span>
                             </div>
-                            <ul class="achievements">
+                            <div class="duration">Freelance</div>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
                                 <li>Delivered custom web applications using Laravel and CodeIgniter, tailored to client needs</li>
                                 <li>Built and customized Shopify themes and plugins, improving store functionality and design</li>
                                 <li>Assisted clients with digital marketing setups to enhance online presence and sales</li>
                             </ul>
                         </div>
-                    </section>
-
-                    <!-- Education -->
-                    <section class="section">
-                        <h3 class="section-title">
-                            <i class="fas fa-graduation-cap"></i>
-                            Education
-                        </h3>
-                        <div class="education-item">
-                            <h4 class="degree">Bachelor's in Software Engineering</h4>
-                            <div class="institution">University of Haripur</div>
-                            <p class="education-description">
-                                Studied core software engineering subjects including programming, algorithms, databases, and software design, with practical training based on the HEC Pakistan curriculum.
-                            </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Shopify</span>
+                            <span class="tech-tag">CodeIgniter</span>
+                            <span class="tech-tag">E-commerce</span>
                         </div>
-                    </section>
-
-                    <!-- Projects -->
-                    <section class="section">
-                        <h3 class="section-title">
-                            <i class="fas fa-project-diagram"></i>
-                            Notable Projects
-                        </h3>
-                        
-                        <div class="project-item">
-                            <div class="project-header">
-                                <h4 class="project-title">BudgetFlow - AI-Powered Budget Tracker</h4>
-                                <span class="project-type">Mobile Application</span>
-                            </div>
-                            <ul class="project-features">
-                                <li>Developed a budget management mobile app with expense tracking, category insights, and smart budgeting features</li>
-                                <li>Integrated AI assistance using LLM APIs and function calling, enabling users to query local data, get reports, and receive personalized financial advice</li>
-                                <li>Implemented savings suggestions, automated reports, and planning tools to help users stay on top of their finances</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-item">
-                            <div class="project-header">
-                                <h4 class="project-title">FormJem - Form Builder Platform</h4>
-                                <span class="project-type">Web Application</span>
-                            </div>
-                            <ul class="project-features">
-                                <li>Built a drag-and-drop form builder that can be embedded into websites or shared via links, similar to Google Forms</li>
-                                <li>Integrated with marketing platforms (Facebook, TikTok, Reddit, Snapchat, Google Ads, etc.) to send leads via conversion APIs and pixels</li>
-                                <li>Designed for scalability and ease of use, helping businesses capture and track leads effectively</li>
-                            </ul>
-                        </div>
-                    </section>
+                    </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
 
-    <!-- Download Button -->
-    <div class="download-section">
-        <button class="download-btn" onclick="downloadPDF()">
-            <i class="fas fa-download"></i>
-            Download Resume (PDF)
-        </button>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing my best work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="project-image">
+                        <img src="img/port1.jpg" alt="BudgetFlow App" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">BudgetFlow - AI-Powered Budget Tracker</h3>
+                        <p class="project-description">
+                            A comprehensive budget management mobile app with AI assistance, expense tracking, 
+                            and personalized financial insights.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">LLM APIs</span>
+                            <span class="tech-tag">Financial Tech</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="img/port2.jpg" alt="FormJem Platform" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FormJem - Form Builder Platform</h3>
+                        <p class="project-description">
+                            A drag-and-drop form builder with marketing platform integrations for lead generation 
+                            and business automation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Marketing APIs</span>
+                            <span class="tech-tag">Lead Generation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="img/port3.jpg" alt="E-commerce Platform" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Modern E-commerce Platform</h3>
+                        <p class="project-description">
+                            A full-featured e-commerce solution with advanced inventory management, 
+                            payment processing, and analytics dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Stripe API</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="img/port4.jpg" alt="AI Chat Assistant" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Powered Chat Assistant</h3>
+                        <p class="project-description">
+                            An intelligent chatbot with natural language processing capabilities, 
+                            integrated with multiple AI services for enhanced user experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>saifullahsaeed.work@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+966 568584158</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>As Sulay, Riyadh, Saudi Arabia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Website</h4>
+                            <p>saifullahsaeed.github.io</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Download Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <div class="resume-content" data-aos="fade-up">
+                <h2>Download My Resume</h2>
+                <p>Get a detailed overview of my experience, skills, and achievements</p>
+                <button class="btn btn-primary" onclick="downloadPDF()">
+                    <i class="fas fa-download"></i>
+                    <span>Download PDF Resume</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Saifullah Saeed. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message! I will get back to you soon.');
+        });
+
+        // PDF Download
         function downloadPDF() {
-            const element = document.getElementById('resume');
+            const element = document.createElement('div');
+            element.innerHTML = `
+                <div style="padding: 40px; font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <h1 style="color: #1a1a1a; margin-bottom: 10px;">Saifullah Saeed</h1>
+                    <h2 style="color: #667eea; margin-bottom: 30px;">Senior Software Engineer</h2>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <p style="color: #666; line-height: 1.6;">
+                            Software Engineer with 6 years of experience in designing, developing, and deploying scalable web and mobile applications. 
+                            Skilled in modern frameworks including Node.js, React.js, Next.js, NestJS, and Django, with hands-on expertise in Flutter for cross-platform mobile apps.
+                        </p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="color: #1a1a1a; border-bottom: 2px solid #667eea; padding-bottom: 5px;">Professional Experience</h3>
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: #667eea; margin-bottom: 5px;">Senior Software Developer - Nyoko Inc</h4>
+                            <p style="color: #666; font-style: italic; margin-bottom: 10px;">July 2022 - Present | Doha, Qatar</p>
+                            <ul style="color: #666; padding-left: 20px;">
+                                <li>Led backend development using Django & Django REST Framework</li>
+                                <li>Built and deployed cross-platform mobile apps with Flutter</li>
+                                <li>Managed a team of 4 developers</li>
+                                <li>Handled CI/CD pipelines and production maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="color: #1a1a1a; border-bottom: 2px solid #667eea; padding-bottom: 5px;">Technical Skills</h3>
+                        <p style="color: #666;"><strong>Frontend:</strong> React.js, Next.js, TypeScript, Tailwind CSS</p>
+                        <p style="color: #666;"><strong>Backend:</strong> Node.js, NestJS, Django, Express.js</p>
+                        <p style="color: #666;"><strong>Mobile:</strong> Flutter, GetX, Provider</p>
+                        <p style="color: #666;"><strong>AI & ML:</strong> LLM APIs, Neural Networks, Data Preprocessing</p>
+                        <p style="color: #666;"><strong>DevOps:</strong> GitHub Actions, Docker, AWS, Firebase</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="color: #1a1a1a; border-bottom: 2px solid #667eea; padding-bottom: 5px;">Contact</h3>
+                        <p style="color: #666;">Email: saifullahsaeed.work@gmail.com</p>
+                        <p style="color: #666;">Phone: +966 568584158</p>
+                        <p style="color: #666;">Location: As Sulay, Riyadh, Saudi Arabia</p>
+                    </div>
+                </div>
+            `;
+            
             const opt = {
                 margin: 0.5,
                 filename: 'Saifullah-Saeed-Resume.pdf',

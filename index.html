@@ -1,243 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saifullah Saeed -| Web Developer</title>
+    <title>Saifullah Saeed - Software Engineer</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
-<body class="main-content">
-    <header class="container header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="img/orbit.gif" alt="Saifullah Saeed" id="image-data">
-                </div>
-            </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span id="name-data">Loading ...</span>
-                    <div id="headline-data">...</div>
-                </h1>
-                <p id="summery-data">
-                    I'm a Web Developer, I love to create beautiful and functional websites.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, libero?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque blanditiis sed aut!
-                </p>
-                <div class="btn-con">
-                    <a href="data/RxResume_PDFExport_BSUbKCmW9d1gWrqLwh9Ck.pdf" class="main-btn" id="resume-dowload">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download" ></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
-            </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p id="about-me">
-                        
-                    </p>
-                    <div class="btn-con">
-                        <a href="data/RxResume_PDFExport_BSUbKCmW9d1gWrqLwh9Ck.pdf" class="main-btn" id="resume-dowload">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download" ></i></span>
-                        </a>
+<body>
+    <div class="resume-container" id="resume">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="img/mypic.jpg" alt="Saifullah Saeed" class="profile-pic">
                     </div>
-                </div>
-                <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text" id="Total-projects"></p>
-                            <p class="small-text">Projects <br /> Completed</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text" id="Total-experience"></p>
-                            <p class="small-text">Years of <br /> experience</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text" id="Total-clients"></p>
-                            <p class="small-text">Happy <br /> Clients</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text" id="Total-reviews"></p>
-                            <p class="small-text">Customer <br /> reviews</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-stats">
-                <h4 class="stat-title">My Skills</h4>
-                <div class="progress-bars" id="skills-list">
-                   
-                </div>
-            </div>
-            <h4 class="stat-title">My Timeline</h4>
-            <div class="timeline" id="timeline">
-                
-            </div>
-        </section>
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
-            </div>
-            <p class="port-text">
-                Here is some of my work that I've done in various programming languages.
-            </p>
-            <div class="portfolios" id="projects">
-                
-            </div>
-        </section>
-        
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <p>
-                            Feel free to contact me if you have any questions or want to work together.
+                    <div class="profile-info">
+                        <h1 class="name">Saifullah Saeed</h1>
+                        <h2 class="title">Software Engineer</h2>
+                        <p class="summary">
+                            Software Engineer with 6 years of experience in designing, developing, and deploying scalable web and mobile applications. Skilled in modern frameworks including Node.js, React.js, Next.js, NestJS, and Django, with hands-on expertise in Flutter for cross-platform mobile apps. Strong background in CI/CD pipelines, GitHub Actions, and cloud deployments.
                         </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span >Location</span>
-                                </div>
-                                <p id="country-data">
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span id="email-data"></span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span id="phone-data">: </span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span id="language-data"></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
-                    <div class="right-contact">
-                        <form action="" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <a href="data/RxResume_PDFExport_BSUbKCmW9d1gWrqLwh9Ck.pdf" class="main-btn" id="resume-dowload">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download" ></i></span>
-                                </a>
-                            </div>
-                        </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>saifullahsaeed.work@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+966 568584158</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>As Sulay, Riyadh, Saudi Arabia</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>https://saifullahsaeed.github.io</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>Pakistani | LG5972171</span>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home">
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
-    </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
-    <Script>
-        (function () {
-            [...document.querySelectorAll(".control")].forEach(button => {
-                button.addEventListener("click", function () {
-                    document.querySelector(".active-btn").classList.remove("active-btn");
-                    this.classList.add("active-btn");
-                    document.querySelector(".active").classList.remove("active");
-                    document.getElementById(button.dataset.id).classList.add("active");
-                })
-            });
-            document.querySelector(".theme-btn").addEventListener("click", () => {
-                document.body.classList.toggle("light-mode");
-            })
-        })();
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- Skills Section -->
+                    <section class="section">
+                        <h3 class="section-title">
+                            <i class="fas fa-code"></i>
+                            Technical Skills
+                        </h3>
+                        
+                        <div class="skill-category">
+                            <h4>Javascript / Typescript</h4>
+                            <ul class="skill-list">
+                                <li>React.js / Next.js</li>
+                                <li>NestJS (Microservices)</li>
+                                <li>Express.js (REST and GraphQL)</li>
+                                <li>Remix (Shopify apps)</li>
+                            </ul>
+                        </div>
 
-    </Script>
-    <script src="app.js"></script>
+                        <div class="skill-category">
+                            <h4>Flutter</h4>
+                            <ul class="skill-list">
+                                <li>GetX (State Management)</li>
+                                <li>Provider (Custom State Management)</li>
+                                <li>Workmanager (Background Management)</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>AI / Machine Learning</h4>
+                            <ul class="skill-list">
+                                <li>Basic Regression & Classification Models</li>
+                                <li>Neural Networks (Foundational Understanding)</li>
+                                <li>Data Preprocessing (Python, Pandas, NumPy)</li>
+                                <li>LLM APIs (Function Calling & Workflow Automation)</li>
+                                <li>Prompt Engineering & AI-assisted Applications</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Python</h4>
+                            <ul class="skill-list">
+                                <li>Django (Web Development)</li>
+                                <li>Django REST Framework (API Development)</li>
+                                <li>RESTful APIs for Web & Mobile Apps</li>
+                                <li>Web Scraping & Automation (BeautifulSoup, Requests, Selenium)</li>
+                                <li>CLI Tools & Scripting</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>CI/CD</h4>
+                            <ul class="skill-list">
+                                <li>GitHub Actions (Automated Workflows & Deployments)</li>
+                                <li>Docker (Containerization & Deployment)</li>
+                                <li>AWS / Firebase (Cloud Deployments & Hosting)</li>
+                                <li>Automated Testing & Linting Pipelines</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Languages Section -->
+                    <section class="section">
+                        <h3 class="section-title">
+                            <i class="fas fa-language"></i>
+                            Languages
+                        </h3>
+                        <div class="languages">
+                            <div class="language-item">
+                                <span class="language-name">English</span>
+                                <span class="language-level">Fluent</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Urdu</span>
+                                <span class="language-level">Native/Bilingual</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Hindi</span>
+                                <span class="language-level">Fluent</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Arabic</span>
+                                <span class="language-level">Basic</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Hobbies Section -->
+                    <section class="section">
+                        <h3 class="section-title">
+                            <i class="fas fa-heart"></i>
+                            Hobbies
+                        </h3>
+                        <div class="hobbies">
+                            <span class="hobby-item">Reading SciFi Books and Novels</span>
+                            <span class="hobby-item">Playing Chess</span>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <!-- Professional Experience -->
+                    <section class="section">
+                        <h3 class="section-title">
+                            <i class="fas fa-briefcase"></i>
+                            Professional Experience
+                        </h3>
+                        
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4 class="job-title">Senior Software Developer</h4>
+                                <div class="company-info">
+                                    <span class="company-name">Nyoko Inc</span>
+                                    <span class="location">Doha, Qatar</span>
+                                </div>
+                                <div class="duration">07/2022 – Present</div>
+                            </div>
+                            <ul class="achievements">
+                                <li>Led backend development using Django & Django REST Framework for web and mobile applications</li>
+                                <li>Built and deployed cross-platform mobile apps with Flutter, integrating APIs and third-party services</li>
+                                <li>Managed a team of 4 developers, overseeing code quality, feature delivery, and task coordination</li>
+                                <li>Handled CI/CD pipelines, deployments, and production maintenance to ensure reliability and scalability</li>
+                                <li>Collaborated with stakeholders to translate requirements into technical solutions and shipped product updates on schedule</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4 class="job-title">MERN Stack Developer</h4>
+                                <div class="company-info">
+                                    <span class="company-name">Turing</span>
+                                    <span class="location">Remote</span>
+                                </div>
+                                <div class="duration">09/2022 – 10/2023</div>
+                            </div>
+                            <ul class="achievements">
+                                <li>Developed full-stack features for a client using Next.js, handling both frontend and backend responsibilities for web and mobile interfaces</li>
+                                <li>Integrated Solidity smart contracts within the application workflow, enabling seamless blockchain interactions and secure logic execution</li>
+                                <li>Collaborated with stakeholders to translate requirements into functional components, maintaining quality, responsiveness, and clarity in delivery</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4 class="job-title">Freelance Web Developer</h4>
+                                <div class="company-info">
+                                    <span class="company-name">Fiverr</span>
+                                    <span class="location">Remote</span>
+                                </div>
+                                <div class="duration">Freelance</div>
+                            </div>
+                            <ul class="achievements">
+                                <li>Delivered custom web applications using Laravel and CodeIgniter, tailored to client needs</li>
+                                <li>Built and customized Shopify themes and plugins, improving store functionality and design</li>
+                                <li>Assisted clients with digital marketing setups to enhance online presence and sales</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Education -->
+                    <section class="section">
+                        <h3 class="section-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Education
+                        </h3>
+                        <div class="education-item">
+                            <h4 class="degree">Bachelor's in Software Engineering</h4>
+                            <div class="institution">University of Haripur</div>
+                            <p class="education-description">
+                                Studied core software engineering subjects including programming, algorithms, databases, and software design, with practical training based on the HEC Pakistan curriculum.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Projects -->
+                    <section class="section">
+                        <h3 class="section-title">
+                            <i class="fas fa-project-diagram"></i>
+                            Notable Projects
+                        </h3>
+                        
+                        <div class="project-item">
+                            <div class="project-header">
+                                <h4 class="project-title">BudgetFlow - AI-Powered Budget Tracker</h4>
+                                <span class="project-type">Mobile Application</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Developed a budget management mobile app with expense tracking, category insights, and smart budgeting features</li>
+                                <li>Integrated AI assistance using LLM APIs and function calling, enabling users to query local data, get reports, and receive personalized financial advice</li>
+                                <li>Implemented savings suggestions, automated reports, and planning tools to help users stay on top of their finances</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-header">
+                                <h4 class="project-title">FormJem - Form Builder Platform</h4>
+                                <span class="project-type">Web Application</span>
+                            </div>
+                            <ul class="project-features">
+                                <li>Built a drag-and-drop form builder that can be embedded into websites or shared via links, similar to Google Forms</li>
+                                <li>Integrated with marketing platforms (Facebook, TikTok, Reddit, Snapchat, Google Ads, etc.) to send leads via conversion APIs and pixels</li>
+                                <li>Designed for scalability and ease of use, helping businesses capture and track leads effectively</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Download Button -->
+    <div class="download-section">
+        <button class="download-btn" onclick="downloadPDF()">
+            <i class="fas fa-download"></i>
+            Download Resume (PDF)
+        </button>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('resume');
+            const opt = {
+                margin: 0.5,
+                filename: 'Saifullah-Saeed-Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
 </body>
-
 </html>

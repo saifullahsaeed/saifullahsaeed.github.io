@@ -30,6 +30,10 @@
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --glass-bg: rgba(255, 255, 255, 0.8);
   --glass-border: rgba(255, 255, 255, 0.2);
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+  --error-color: #ef4444;
 }
 
 [data-theme="dark"] {
@@ -54,6 +58,10 @@
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.5);
   --glass-bg: rgba(15, 23, 42, 0.8);
   --glass-border: rgba(255, 255, 255, 0.1);
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+  --error-color: #ef4444;
 }
 
 /* Typography */

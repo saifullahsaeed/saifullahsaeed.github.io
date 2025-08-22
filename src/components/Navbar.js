@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +31,7 @@ const Navbar = () => {
         <div className="nav-logo">
           <span className="logo-text">Saifullah</span>
         </div>
+        
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
             <button className="nav-link" onClick={() => scrollToSection('home')}>
@@ -59,7 +63,17 @@ const Navbar = () => {
               Resume
             </button>
           </li>
+          <li className="nav-item theme-toggle">
+            <button 
+              className="theme-btn" 
+              onClick={toggleTheme}
+              aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
+            >
+              {isDark ? <FaSun /> : <FaMoon />}
+            </button>
+          </li>
         </ul>
+        
         <div 
           className={`hamburger ${isMenuOpen ? 'active' : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}

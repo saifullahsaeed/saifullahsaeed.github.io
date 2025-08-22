@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGlobe, FaPaperPlane, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGlobe, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,65 +10,56 @@ const Contact = () => {
     triggerOnce: true
   });
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your message! I will get back to you soon.');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
-
   const contactInfo = [
     {
       icon: FaEnvelope,
       title: 'Email',
       value: 'saifullahsaeed.work@gmail.com',
-      link: 'mailto:saifullahsaeed.work@gmail.com'
+      link: 'mailto:saifullahsaeed.work@gmail.com',
+      color: '#ea4335'
     },
     {
       icon: FaPhone,
       title: 'Phone',
       value: '+966 568584158',
-      link: 'tel:+966568584158'
+      link: 'tel:+966568584158',
+      color: '#25d366'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
       value: 'As Sulay, Riyadh, Saudi Arabia',
-      link: null
+      link: null,
+      color: '#ff6b6b'
     },
     {
       icon: FaGlobe,
       title: 'Website',
       value: 'saifullahsaeed.github.io',
-      link: 'https://saifullahsaeed.github.io'
+      link: 'https://saifullahsaeed.github.io',
+      color: '#667eea'
     }
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, url: 'https://linkedin.com/in/saifullahsaeed', label: 'LinkedIn' },
-    { icon: FaGithub, url: 'https://github.com/saifullahsaeed', label: 'GitHub' },
-    { icon: FaTwitter, url: 'https://twitter.com/saifullahsaeed', label: 'Twitter' }
+    { 
+      icon: FaLinkedin, 
+      url: 'https://linkedin.com/in/saifullahsaeed', 
+      label: 'LinkedIn',
+      color: '#0077b5'
+    },
+    { 
+      icon: FaGithub, 
+      url: 'https://github.com/saifullahsaeed', 
+      label: 'GitHub',
+      color: '#333'
+    },
+    { 
+      icon: FaTwitter, 
+      url: 'https://twitter.com/saifullahsaeed', 
+      label: 'Twitter',
+      color: '#1da1f2'
+    }
   ];
 
   const containerVariants = {
@@ -103,42 +94,33 @@ const Contact = () => {
         >
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
-            Let's work together on your next project. I'm always open to new opportunities!
+            Ready to collaborate? Let's discuss your next project
           </p>
         </motion.div>
         
-        <div className="contact-content">
-          {/* Contact Info */}
-          <motion.div 
-            className="contact-info"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h3 className="contact-info-title">Contact Information</h3>
-            <p className="contact-info-description">
-              Feel free to reach out through any of these channels. I'll get back to you as soon as possible.
-            </p>
-            
+        <motion.div 
+          className="contact-content"
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
+          <div className="contact-info-section">
             <motion.div 
-              className="contact-items"
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+              className="contact-info-grid"
+              variants={itemVariants}
             >
               {contactInfo.map((info, index) => (
                 <motion.div 
                   key={index} 
-                  className="contact-item"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.02 }}
+                  className="contact-card"
+                  whileHover={{ y: -5 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="contact-icon">
+                  <div className="contact-icon" style={{ backgroundColor: info.color }}>
                     <info.icon />
                   </div>
                   <div className="contact-details">
-                    <h4 className="contact-title">{info.title}</h4>
+                    <h3 className="contact-title">{info.title}</h3>
                     {info.link ? (
                       <a 
                         href={info.link} 
@@ -155,101 +137,35 @@ const Contact = () => {
                 </motion.div>
               ))}
             </motion.div>
+          </div>
 
-            {/* Social Links */}
-            <motion.div 
-              className="social-links"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <h4 className="social-title">Follow Me</h4>
-              <div className="social-icons">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-icon"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <social.icon />
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-          
-          {/* Contact Form */}
           <motion.div 
-            className="contact-form"
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            className="social-section"
+            variants={itemVariants}
           >
-            <h3 className="form-title">Send Me a Message</h3>
-            <form onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                  />
-                </div>
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="form-input"
-                />
-              </div>
-              <div className="form-group">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="6"
-                  className="form-textarea"
-                ></textarea>
-              </div>
-              <motion.button 
-                type="submit" 
-                className="btn btn-primary submit-btn"
-                disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-                <FaPaperPlane />
-              </motion.button>
-            </form>
+            <h3 className="social-title">Connect With Me</h3>
+            <p className="social-subtitle">
+              Follow me on social media for updates and insights
+            </p>
+            <div className="social-links">
+              {socialLinks.map((social, index) => (
+                <motion.a 
+                  key={index}
+                  href={social.url} 
+                  className="social-link"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ '--social-color': social.color }}
+                  whileHover={{ scale: 1.1, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <social.icon />
+                  <span>{social.label}</span>
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -24,7 +24,7 @@ const Experience = () => {
       title: 'MERN Stack Developer',
       company: 'Turing',
       location: 'Remote',
-      period: '09/2022 – 10/2023',
+      period: '07/2022 – 07/2023',
       description: 'Full-stack development with blockchain integration and smart contracts.',
       achievements: [
         'Developed full-stack features for a client using Next.js, handling both frontend and backend responsibilities',
@@ -39,7 +39,7 @@ const Experience = () => {
       title: 'Freelance Web Developer',
       company: 'Fiverr',
       location: 'Remote',
-      period: '2020 – 2022',
+      period: '2019 – 07/2022',
       description: 'Custom web development and e-commerce solutions for various clients.',
       achievements: [
         'Delivered custom web applications using Laravel and CodeIgniter, tailored to client needs',

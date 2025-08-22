@@ -1,15 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
 import './Experience.css';
 
 const Experience = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true
-  });
-
   const experiences = [
     {
       title: 'Senior Software Developer',
@@ -59,53 +52,21 @@ const Experience = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8
-      }
-    }
-  };
-
   return (
-    <section id="experience" className="experience" ref={ref}>
+    <section id="experience" className="experience">
       <div className="experience-container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="section-header">
           <h2 className="section-title">Professional Experience</h2>
           <p className="section-subtitle">
             My journey through various roles and companies, building expertise in modern technologies
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="experience-timeline"
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-        >
+        <div className="experience-timeline">
           {experiences.map((exp, index) => (
-            <motion.div 
+            <div
               key={index}
               className={`experience-item ${index % 2 === 0 ? 'left' : 'right'}`}
-              variants={itemVariants}
             >
               <div className="experience-card">
                 <div className="experience-header">
@@ -116,7 +77,7 @@ const Experience = () => {
                       <span>{exp.company}</span>
                     </div>
                   </div>
-                  
+
                   <div className="experience-meta">
                     <div className="experience-period">
                       <FaCalendarAlt className="meta-icon" />
@@ -136,7 +97,7 @@ const Experience = () => {
 
                 <div className="experience-content">
                   <p className="experience-description">{exp.description}</p>
-                  
+
                   <div className="experience-achievements">
                     <h4 className="achievements-title">Key Achievements:</h4>
                     <ul className="achievements-list">
@@ -160,31 +121,22 @@ const Experience = () => {
                   </div>
                 </div>
 
-                <motion.div 
-                  className="experience-timeline-dot"
-                  whileHover={{ scale: 1.2 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <div className="experience-timeline-dot">
                   <div className="dot-inner"></div>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Download Resume CTA */}
-        <motion.div 
-          className="resume-cta"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.0 }}
-        >
+        <div className="resume-cta">
           <div className="cta-content">
             <h3 className="cta-title">Want to see more details?</h3>
             <p className="cta-description">
               Download my complete resume for a detailed overview of my experience and skills
             </p>
-            <button 
+            <button
               className="btn btn-primary"
               onClick={() => document.getElementById('resume').scrollIntoView({ behavior: 'smooth' })}
             >
@@ -192,7 +144,7 @@ const Experience = () => {
               <FaExternalLinkAlt />
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

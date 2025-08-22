@@ -19,13 +19,17 @@
 }
 
 .experience-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   transform: translateX(-50%);
 }
 
@@ -85,13 +89,6 @@
   height: 100%;
   background: var(--primary-color);
   border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
 }
 
 /* Experience Header */
@@ -220,7 +217,7 @@
 }
 
 .achievement-item::before {
-  content: '▸';
+  content: "▸";
   position: absolute;
   left: 0;
   color: var(--primary-color);
@@ -300,25 +297,25 @@
   .experience-timeline::before {
     left: 30px;
   }
-  
+
   .experience-item.left,
   .experience-item.right {
     padding-left: 60px;
     padding-right: 0;
   }
-  
+
   .experience-item.left .experience-timeline-dot,
   .experience-item.right .experience-timeline-dot {
     left: 20px;
     right: auto;
   }
-  
+
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .experience-meta {
     align-items: flex-start;
     text-align: left;
@@ -329,33 +326,33 @@
   .experience {
     padding: 4rem 0;
   }
-  
+
   .experience-timeline {
     margin: 2rem 0;
   }
-  
+
   .experience-card {
     padding: 1.5rem;
   }
-  
+
   .experience-title {
     font-size: 1.3rem;
   }
-  
+
   .experience-header {
     gap: 0.75rem;
   }
-  
+
   .experience-meta {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
   }
-  
+
   .cta-content {
     padding: 2rem 1.5rem;
   }
-  
+
   .cta-title {
     font-size: 1.5rem;
   }
@@ -365,51 +362,51 @@
   .experience-container {
     padding: 0 1rem;
   }
-  
+
   .experience-timeline::before {
     left: 20px;
   }
-  
+
   .experience-item.left,
   .experience-item.right {
     padding-left: 50px;
   }
-  
+
   .experience-item.left .experience-timeline-dot,
   .experience-item.right .experience-timeline-dot {
     left: 10px;
   }
-  
+
   .experience-card {
     padding: 1rem;
   }
-  
+
   .experience-title {
     font-size: 1.2rem;
   }
-  
+
   .experience-meta {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .technologies-tags {
     gap: 0.25rem;
   }
-  
+
   .technology-tag {
     font-size: 0.75rem;
     padding: 0.2rem 0.6rem;
   }
-  
+
   .cta-content {
     padding: 1.5rem 1rem;
   }
-  
+
   .cta-title {
     font-size: 1.3rem;
   }
-  
+
   .cta-description {
     font-size: 1rem;
   }

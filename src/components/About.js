@@ -98,7 +98,7 @@ const About = () => {
   return (
     <section id="about" className="about" ref={ref}>
       <div className="about-container">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -112,13 +112,13 @@ const About = () => {
 
         <div className="about-content">
           {/* Left Side - About Text & Stats */}
-          <motion.div 
+          <motion.div
             className="about-text"
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <motion.div 
+            <motion.div
               className="about-description"
               variants={containerVariants}
               initial="hidden"
@@ -127,23 +127,23 @@ const About = () => {
               <motion.div className="intro-section" variants={itemVariants}>
                 <h3 className="intro-title">Hello! I'm Saifullah 👋</h3>
                 <p className="intro-text">
-                  A <strong>Senior Software Engineer</strong> with 6 years of experience crafting exceptional digital experiences. 
+                  A <strong>Senior Software Engineer</strong> with 6 years of experience crafting exceptional digital experiences.
                   My journey in software development has been driven by a passion for creating innovative solutions that solve real-world problems.
                 </p>
               </motion.div>
-              
+
               <motion.div className="journey-section" variants={itemVariants}>
                 <h4 className="journey-title">My Journey</h4>
                 <p className="journey-text">
-                  I specialize in <strong>full-stack development</strong> using modern technologies like React, Node.js, and Flutter. 
+                  I specialize in <strong>full-stack development</strong> using modern technologies like React, Node.js, and Flutter.
                   My expertise extends to AI/ML integration, where I've successfully implemented intelligent features using LLM APIs and machine learning models.
                 </p>
               </motion.div>
-              
+
               <motion.div className="current-section" variants={itemVariants}>
                 <h4 className="current-title">Currently</h4>
                 <p className="current-text">
-                  Working as a <strong>Senior Developer at Nyoko Inc</strong>, I lead backend development and manage cross-platform mobile applications. 
+                  Working as a <strong>Senior Developer at Nyoko Inc</strong>, I lead backend development and manage cross-platform mobile applications.
                   I've successfully delivered 50+ projects across various domains, always focusing on scalability, performance, and user experience.
                 </p>
               </motion.div>
@@ -151,21 +151,21 @@ const About = () => {
               <motion.div className="passion-section" variants={itemVariants}>
                 <h4 className="passion-title">What Drives Me</h4>
                 <p className="passion-text">
-                  I'm passionate about <strong>clean code</strong>, <strong>performance optimization</strong>, and creating user experiences that make a difference. 
+                  I'm passionate about <strong>clean code</strong>, <strong>performance optimization</strong>, and creating user experiences that make a difference.
                   When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring fellow developers.
                 </p>
               </motion.div>
             </motion.div>
 
             {/* Stats */}
-            <motion.div 
+            <motion.div
               className="about-stats"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               {stats.map((stat, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="stat-card"
                   whileHover={{ scale: 1.05, y: -5 }}
@@ -182,14 +182,14 @@ const About = () => {
           </motion.div>
 
           {/* Right Side - Skills & Expertise */}
-          <motion.div 
+          <motion.div
             className="about-skills"
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {/* Skills Progress */}
-            <motion.div 
+            <motion.div
               className="skills-section"
               variants={containerVariants}
               initial="hidden"
@@ -199,7 +199,7 @@ const About = () => {
               <p className="skills-subtitle">Technologies I work with daily</p>
               <div className="skills-list">
                 {skills.map((skill, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="skill-item"
                     variants={itemVariants}
@@ -211,7 +211,7 @@ const About = () => {
                       <span className="skill-name">{skill.name}</span>
                     </div>
                     <div className="skill-bar">
-                      <motion.div 
+                      <motion.div
                         className="skill-progress"
                         initial={{ width: 0 }}
                         animate={inView ? { width: `${skill.level}%` } : {}}
@@ -225,7 +225,7 @@ const About = () => {
             </motion.div>
 
             {/* Expertise Areas */}
-            <motion.div 
+            <motion.div
               className="expertise-section"
               variants={containerVariants}
               initial="hidden"
@@ -235,7 +235,7 @@ const About = () => {
               <p className="expertise-subtitle">What I bring to the table</p>
               <div className="expertise-grid">
                 {expertise.map((item, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="expertise-card"
                     variants={itemVariants}
@@ -253,7 +253,7 @@ const About = () => {
             </motion.div>
 
             {/* Education */}
-            <motion.div 
+            <motion.div
               className="education-section"
               variants={containerVariants}
               initial="hidden"
@@ -262,7 +262,7 @@ const About = () => {
               <h3 className="education-title">Education</h3>
               <div className="education-list">
                 {education.map((edu, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="education-card"
                     variants={itemVariants}

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaExternalLinkAlt, FaGithub, FaEye } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaEye, FaMobile } from 'react-icons/fa';
+import ProjectDetails from './ProjectDetails';
 import './Projects.css';
 
 const Projects = () => {
@@ -10,60 +11,51 @@ const Projects = () => {
     triggerOnce: true
   });
 
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
-    {
-      title: 'BudgetFlow - AI-Powered Budget Tracker',
-      description: 'A comprehensive budget management mobile app with AI assistance, expense tracking, and personalized financial insights.',
-      image: '/img/port1.jpg',
-      tech: ['Flutter', 'AI/ML', 'LLM APIs', 'Financial Tech'],
-      liveUrl: '#',
-      githubUrl: '#',
-      category: 'Mobile App'
-    },
     {
       title: 'FormJem - Form Builder Platform',
       description: 'A drag-and-drop form builder with marketing platform integrations for lead generation and business automation.',
-      image: '/img/port2.jpg',
+      image: '/img/port1.jpg',
       tech: ['React.js', 'Node.js', 'Marketing APIs', 'Lead Generation'],
-      liveUrl: '#',
-      githubUrl: '#',
-      category: 'Web App'
+      liveUrl: 'https://formjem.com',
+      githubUrl: null,
+      category: 'Web App',
+      type: 'live'
     },
     {
-      title: 'Modern E-commerce Platform',
-      description: 'A full-featured e-commerce solution with advanced inventory management, payment processing, and analytics dashboard.',
+      title: 'Habbitable - Habit Tracking App',
+      description: 'A Flutter-based mobile application for habit tracking with separate backend and frontend architecture.',
+      image: '/img/port2.jpg',
+      tech: ['Flutter', 'NestJS', 'TypeScript', 'Mobile Development'],
+      liveUrl: null,
+      githubUrl: {
+        frontend: 'https://github.com/saifullahsaeed/habbitable',
+        backend: 'https://github.com/saifullahsaeed/habit-planner'
+      },
+      category: 'Mobile App',
+      type: 'github'
+    },
+    {
+      title: 'BudgetFlow - AI-Powered Budget Tracker',
+      description: 'A comprehensive budget management mobile app with AI assistance, expense tracking, and personalized financial insights.',
       image: '/img/port3.jpg',
-      tech: ['Next.js', 'Django', 'Stripe API', 'Analytics'],
-      liveUrl: '#',
-      githubUrl: '#',
-      category: 'E-commerce'
+      tech: ['Flutter', 'AI/ML', 'Financial Tech', 'Play Store'],
+      liveUrl: 'https://play.google.com/store/apps/details?id=com.pynese.expense_tracker',
+      githubUrl: null,
+      category: 'Mobile App',
+      type: 'playstore'
     },
     {
-      title: 'AI-Powered Chat Assistant',
-      description: 'An intelligent chatbot with natural language processing capabilities, integrated with multiple AI services for enhanced user experience.',
+      title: 'RootTask - Task Management System',
+      description: 'A Next.js-based task management system with React Flow integration, allowing users to create parent-child card relationships and team collaboration.',
       image: '/img/port4.jpg',
-      tech: ['Python', 'OpenAI API', 'NLP', 'WebSocket'],
-      liveUrl: '#',
-      githubUrl: '#',
-      category: 'AI/ML'
-    },
-    {
-      title: 'Task Management System',
-      description: 'A collaborative task management platform with real-time updates, team collaboration features, and progress tracking.',
-      image: '/img/port5.jpg',
-      tech: ['React.js', 'Socket.io', 'MongoDB', 'Real-time'],
-      liveUrl: '#',
-      githubUrl: '#',
-      category: 'Web App'
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website built with React and featuring smooth animations and professional design.',
-      image: '/img/port6.jpg',
-      tech: ['React.js', 'Framer Motion', 'CSS3', 'Responsive'],
-      liveUrl: '#',
-      githubUrl: '#',
-      category: 'Web Design'
+      tech: ['Next.js', 'React Flow', 'Task Management', 'Team Collaboration'],
+      liveUrl: 'https://roottask.vercel.app',
+      githubUrl: 'https://github.com/saifullahsaeed/roottask',
+      category: 'Web App',
+      type: 'live'
     }
   ];
 
@@ -87,6 +79,8 @@ const Projects = () => {
       }
     }
   };
+
+
 
   return (
     <section id="projects" className="projects" ref={ref}>
@@ -116,6 +110,8 @@ const Projects = () => {
               variants={itemVariants}
               whileHover={{ y: -10 }}
               transition={{ duration: 0.3 }}
+              onClick={() => setSelectedProject(project)}
+              style={{ cursor: 'pointer' }}
             >
               <div className="project-image">
                 <img src={project.image} alt={project.title} className="project-img" />
@@ -124,26 +120,56 @@ const Projects = () => {
                     <span>{project.category}</span>
                   </div>
                   <div className="project-links">
-                    <motion.a 
-                      href={project.liveUrl} 
-                      className="project-link"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaEye />
-                    </motion.a>
-                    <motion.a 
-                      href={project.githubUrl} 
-                      className="project-link"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaGithub />
-                    </motion.a>
+                    {project.liveUrl && (
+                      <motion.a 
+                        href={project.liveUrl} 
+                        className="project-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaEye />
+                      </motion.a>
+                    )}
+                    {project.githubUrl && typeof project.githubUrl === 'string' && (
+                      <motion.a 
+                        href={project.githubUrl} 
+                        className="project-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaGithub />
+                      </motion.a>
+                    )}
+                    {project.githubUrl && typeof project.githubUrl === 'object' && (
+                      <motion.a 
+                        href={project.githubUrl.frontend} 
+                        className="project-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        title="Frontend Repository"
+                      >
+                        <FaGithub />
+                      </motion.a>
+                    )}
+                    {project.type === 'playstore' && (
+                      <motion.a 
+                        href={project.liveUrl} 
+                        className="project-link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        title="Available on Play Store"
+                      >
+                        <FaMobile />
+                      </motion.a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -158,6 +184,16 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+                {project.githubUrl && typeof project.githubUrl === 'object' && (
+                  <div className="project-repos">
+                    <a href={project.githubUrl.frontend} target="_blank" rel="noopener noreferrer" className="repo-link">
+                      Frontend Repository
+                    </a>
+                    <a href={project.githubUrl.backend} target="_blank" rel="noopener noreferrer" className="repo-link">
+                      Backend Repository
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
@@ -189,6 +225,14 @@ const Projects = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Project Details Modal */}
+      {selectedProject && (
+        <ProjectDetails 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
+      )}
     </section>
   );
 };

@@ -1,0 +1,347 @@
+/* ===== PROJECT DETAILS MODAL ===== */
+.project-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.project-details-modal {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.close-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Modal Content */
+.modal-content {
+  padding: 0 2rem 2rem;
+}
+
+/* Project Image Section */
+.project-image-section {
+  margin-bottom: 2rem;
+}
+
+.project-detail-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-links-section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.detail-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.detail-link:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Project Info */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.overview-section,
+.features-section,
+.tech-stack-section,
+.challenges-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.overview-section h3,
+.features-section h3,
+.tech-stack-section h3,
+.challenges-section h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.overview-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.features-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.features-section li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.features-section li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Tech Stack */
+.tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tech-category h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.tech-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Challenges & Solutions */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.challenges,
+.solutions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.challenges h4,
+.solutions h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.challenges ul,
+.solutions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.challenges li,
+.solutions li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.challenges li::before {
+  content: '⚠️';
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+.solutions li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-details-overlay {
+    padding: 1rem;
+  }
+  
+  .project-details-modal {
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .modal-content {
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  .project-detail-image {
+    height: 200px;
+  }
+  
+  .project-links-section {
+    flex-direction: column;
+  }
+  
+  .detail-link {
+    justify-content: center;
+  }
+  
+  .challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .tech-categories {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-details-overlay {
+    padding: 0.5rem;
+  }
+  
+  .modal-header {
+    padding: 1rem 1rem 0.75rem;
+  }
+  
+  .modal-title {
+    font-size: 1.3rem;
+  }
+  
+  .modal-content {
+    padding: 0 1rem 1rem;
+  }
+  
+  .project-detail-image {
+    height: 150px;
+  }
+  
+  .overview-section h3,
+  .features-section h3,
+  .tech-stack-section h3,
+  .challenges-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .overview-section p {
+    font-size: 1rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

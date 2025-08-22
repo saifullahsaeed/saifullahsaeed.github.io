@@ -110,180 +110,143 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="about-content">
-          {/* Left Side - About Text & Stats */}
-          <motion.div
-            className="about-text"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <motion.div
-              className="about-description"
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-            >
-              <motion.div className="intro-section" variants={itemVariants}>
-                <h3 className="intro-title">Hello! I'm Saifullah 👋</h3>
-                <p className="intro-text">
-                  A <strong>Senior Software Engineer</strong> with 6 years of experience crafting exceptional digital experiences.
-                  My journey in software development has been driven by a passion for creating innovative solutions that solve real-world problems.
-                </p>
-              </motion.div>
+        {/* Introduction Section */}
+        <motion.div
+          className="about-intro"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="intro-content">
+            <h3 className="intro-title">Hello! I'm Saifullah 👋</h3>
+            <p className="intro-text">
+              A <strong>Senior Software Engineer</strong> with 6 years of experience crafting exceptional digital experiences.
+              My journey in software development has been driven by a passion for creating innovative solutions that solve real-world problems.
+            </p>
+            <p className="intro-text">
+              I specialize in <strong>full-stack development</strong> using modern technologies like React, Node.js, and Flutter.
+              My expertise extends to AI/ML integration, where I've successfully implemented intelligent features using LLM APIs and machine learning models.
+            </p>
+          </div>
+        </motion.div>
 
-              <motion.div className="journey-section" variants={itemVariants}>
-                <h4 className="journey-title">My Journey</h4>
-                <p className="journey-text">
-                  I specialize in <strong>full-stack development</strong> using modern technologies like React, Node.js, and Flutter.
-                  My expertise extends to AI/ML integration, where I've successfully implemented intelligent features using LLM APIs and machine learning models.
-                </p>
+        {/* Stats Section */}
+        <motion.div
+          className="about-stats-section"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="stats-grid">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="stat-item"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="stat-icon">
+                  <stat.icon />
+                </div>
+                <span className="stat-number">{stat.number}</span>
+                <span className="stat-label">{stat.label}</span>
               </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-              <motion.div className="current-section" variants={itemVariants}>
-                <h4 className="current-title">Currently</h4>
-                <p className="current-text">
-                  Working as a <strong>Senior Developer at Nyoko Inc</strong>, I lead backend development and manage cross-platform mobile applications.
-                  I've successfully delivered 50+ projects across various domains, always focusing on scalability, performance, and user experience.
-                </p>
-              </motion.div>
-
-              <motion.div className="passion-section" variants={itemVariants}>
-                <h4 className="passion-title">What Drives Me</h4>
-                <p className="passion-text">
-                  I'm passionate about <strong>clean code</strong>, <strong>performance optimization</strong>, and creating user experiences that make a difference.
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring fellow developers.
-                </p>
-              </motion.div>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="about-stats"
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="stat-card"
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="stat-icon">
-                    <stat.icon />
+        {/* Skills Section */}
+        <motion.div
+          className="about-skills-section"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <h3 className="section-subtitle">Technical Skills</h3>
+          <div className="skills-grid">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                className="skill-item"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, y: -2 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="skill-header">
+                  <div className="skill-icon-wrapper" style={{ backgroundColor: skill.color }}>
+                    <skill.icon />
                   </div>
-                  <span className="stat-number">{stat.number}</span>
-                  <span className="stat-label">{stat.label}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
+                  <span className="skill-name">{skill.name}</span>
+                </div>
+                <div className="skill-bar">
+                  <div
+                    className="skill-progress"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-          {/* Right Side - Skills & Expertise */}
-          <motion.div
-            className="about-skills"
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            {/* Skills Progress */}
-            <motion.div
-              className="skills-section"
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-            >
-              <h3 className="skills-title">Technical Skills</h3>
-              <p className="skills-subtitle">Technologies I work with daily</p>
-              <div className="skills-list">
-                {skills.map((skill, index) => (
-                  <motion.div
-                    key={index}
-                    className="skill-item"
-                    variants={itemVariants}
-                  >
-                    <div className="skill-header">
-                      <div className="skill-icon-wrapper" style={{ backgroundColor: skill.color + '20' }}>
-                        <skill.icon className="skill-icon" style={{ color: skill.color }} />
-                      </div>
-                      <span className="skill-name">{skill.name}</span>
-                    </div>
-                    <div className="skill-bar">
-                      <motion.div
-                        className="skill-progress"
-                        initial={{ width: 0 }}
-                        animate={inView ? { width: `${skill.level}%` } : {}}
-                        transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
-                        style={{ background: `linear-gradient(90deg, ${skill.color}, ${skill.color}dd)` }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+        {/* Expertise Section */}
+        <motion.div
+          className="about-expertise-section"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <h3 className="section-subtitle">Areas of Expertise</h3>
+          <div className="expertise-grid">
+            {expertise.map((exp, index) => (
+              <motion.div
+                key={index}
+                className="expertise-card"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, y: -3 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="expertise-icon" style={{ color: exp.color }}>
+                  <exp.icon />
+                </div>
+                <h4 className="expertise-title">{exp.title}</h4>
+                <p className="expertise-description">{exp.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-            {/* Expertise Areas */}
-            <motion.div
-              className="expertise-section"
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-            >
-              <h3 className="expertise-title">Areas of Expertise</h3>
-              <p className="expertise-subtitle">What I bring to the table</p>
-              <div className="expertise-grid">
-                {expertise.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="expertise-card"
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="expertise-icon" style={{ backgroundColor: item.color + '20' }}>
-                      <item.icon style={{ color: item.color }} />
-                    </div>
-                    <h4 className="expertise-card-title">{item.title}</h4>
-                    <p className="expertise-card-description">{item.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Education */}
-            <motion.div
-              className="education-section"
-              variants={containerVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-            >
-              <h3 className="education-title">Education</h3>
-              <div className="education-list">
-                {education.map((edu, index) => (
-                  <motion.div
-                    key={index}
-                    className="education-card"
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="education-icon">
-                      <FaGraduationCap />
-                    </div>
-                    <div className="education-content">
-                      <h4 className="education-degree">{edu.degree}</h4>
-                      <p className="education-institution">{edu.institution}</p>
-                      <span className="education-year">{edu.year}</span>
-                      <p className="education-description">{edu.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
+        {/* Education Section */}
+        <motion.div
+          className="about-education-section"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 1.0 }}
+        >
+          <h3 className="section-subtitle">Education</h3>
+          <div className="education-grid">
+            {education.map((edu, index) => (
+              <motion.div
+                key={index}
+                className="education-card"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, y: -3 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="education-icon">
+                  <FaGraduationCap />
+                </div>
+                <div className="education-content">
+                  <h4 className="education-degree">{edu.degree}</h4>
+                  <p className="education-institution">{edu.institution}</p>
+                  <p className="education-year">{edu.year}</p>
+                  <p className="education-description">{edu.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

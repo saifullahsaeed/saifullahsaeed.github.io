@@ -8,7 +8,7 @@ const Experience = () => {
       title: 'Senior Software Developer',
       company: 'Nyoko Inc',
       location: 'Doha, Qatar',
-      period: '07/2022 – Present',
+      period: 'July 2022 – Present',
       description: 'Leading backend development and mobile app development with a team of 4 developers.',
       achievements: [
         'Led backend development using Django & Django REST Framework for web and mobile applications',
@@ -24,7 +24,7 @@ const Experience = () => {
       title: 'MERN Stack Developer',
       company: 'Turing',
       location: 'Remote',
-      period: '07/2022 – 07/2023',
+      period: 'July 2022 – July 2023',
       description: 'Full-stack development with blockchain integration and smart contracts.',
       achievements: [
         'Developed full-stack features for a client using Next.js, handling both frontend and backend responsibilities',
@@ -39,7 +39,7 @@ const Experience = () => {
       title: 'Freelance Web Developer',
       company: 'Fiverr',
       location: 'Remote',
-      period: '2019 – 07/2022',
+      period: '2019 – July 2022',
       description: 'Custom web development and e-commerce solutions for various clients.',
       achievements: [
         'Delivered custom web applications using Laravel and CodeIgniter, tailored to client needs',

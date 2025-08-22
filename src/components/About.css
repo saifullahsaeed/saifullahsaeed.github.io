@@ -11,32 +11,27 @@
   padding: 0 2rem;
 }
 
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 3rem;
-  align-items: start;
+/* Introduction Section */
+.about-intro {
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
-/* About Text Section */
-.about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-/* Intro Section */
-.intro-section {
-  margin-bottom: 2.5rem;
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .intro-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,59 +41,27 @@
   font-size: 1.2rem;
   line-height: 1.8;
   color: var(--text-secondary);
-  margin: 0;
+  margin-bottom: 1.5rem;
 }
 
-.journey-section,
-.current-section,
-.passion-section {
-  margin-bottom: 2rem;
+.intro-text:last-child {
+  margin-bottom: 0;
 }
 
-.journey-title,
-.current-title,
-.passion-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.journey-text,
-.current-text,
-.passion-text {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.about-description {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.about-description p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.about-description strong {
+.intro-text strong {
   color: var(--text-primary);
   font-weight: 600;
 }
 
 /* Stats Section */
-.about-stats {
+.about-stats-section {
+  margin-bottom: 5rem;
+}
+
+.stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -106,8 +69,8 @@
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 1rem;
-  padding: 1.5rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
   text-align: center;
   transition: all var(--transition-fast);
 }
@@ -118,35 +81,42 @@
 }
 
 .stat-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
 .stat-number {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 .stat-label {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   font-weight: 500;
 }
 
 /* Skills Section */
-.about-skills {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.about-skills-section {
+  margin-bottom: 5rem;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .skill-item {
@@ -193,27 +163,28 @@
   background: var(--bg-secondary);
   border-radius: 4px;
   overflow: hidden;
-  position: relative;
 }
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   border-radius: 4px;
   transition: width 1s ease-in-out;
 }
 
 /* Expertise Section */
-.about-expertise {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.about-expertise-section {
+  margin-bottom: 5rem;
 }
 
 .expertise-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
 .expertise-card {
@@ -221,20 +192,24 @@
   backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   transition: all var(--transition-fast);
   position: relative;
   overflow: hidden;
 }
 
 .expertise-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
 
 .expertise-card:hover {
@@ -243,32 +218,33 @@
 }
 
 .expertise-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .expertise-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .expertise-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* Education Section */
-.education-section {
-  margin-top: 2rem;
+.about-education-section {
+  margin-bottom: 2rem;
 }
 
 .education-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .education-card {
@@ -276,7 +252,10 @@
   backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
   transition: all var(--transition-fast);
 }
 
@@ -285,45 +264,67 @@
   box-shadow: var(--shadow-lg);
 }
 
+.education-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.education-content {
+  flex: 1;
+}
+
 .education-degree {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .education-institution {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .education-year {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .education-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  
-  .skills-grid,
-  .expertise-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .about-stats {
+  .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
@@ -331,53 +332,63 @@
   .about {
     padding: 4rem 0;
   }
-  
+
   .about-container {
     padding: 0 1.5rem;
   }
-  
-  .about-content {
-    gap: 2rem;
-    margin-top: 2rem;
+
+  .about-intro {
+    margin-bottom: 3rem;
   }
-  
+
   .intro-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
-  
+
   .intro-text {
     font-size: 1.1rem;
   }
-  
-  .journey-title,
-  .current-title,
-  .passion-title {
-    font-size: 1.2rem;
-  }
-  
-  .journey-text,
-  .current-text,
-  .passion-text {
-    font-size: 1rem;
-  }
-  
-  .about-stats {
+
+  .stats-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
-  
+
   .stat-item {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
-  
+
   .stat-number {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
-  
-  .skill-item,
-  .expertise-card,
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .expertise-card {
+    padding: 1.5rem;
+  }
+
   .education-card {
-    padding: 1.25rem;
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .education-icon {
+    align-self: center;
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -385,54 +396,52 @@
   .about-container {
     padding: 0 1rem;
   }
-  
+
   .intro-title {
-    font-size: 1.4rem;
+    font-size: 1.75rem;
   }
-  
+
   .intro-text {
     font-size: 1rem;
   }
-  
-  .journey-title,
-  .current-title,
-  .passion-title {
-    font-size: 1.1rem;
-  }
-  
-  .journey-text,
-  .current-text,
-  .passion-text {
-    font-size: 0.95rem;
-  }
-  
+
   .stat-item {
-    padding: 1rem;
+    padding: 1.25rem;
   }
-  
+
   .stat-number {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
-  
+
   .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
-  
-  .skill-item,
-  .expertise-card,
-  .education-card {
-    padding: 1rem;
+
+  .skill-item {
+    padding: 1.25rem;
   }
-  
+
   .skill-name {
     font-size: 1rem;
   }
-  
-  .expertise-title {
-    font-size: 1rem;
+
+  .expertise-card {
+    padding: 1.25rem;
   }
-  
+
+  .expertise-title {
+    font-size: 1.2rem;
+  }
+
+  .education-card {
+    padding: 1.25rem;
+  }
+
   .education-degree {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.3rem;
   }
 }

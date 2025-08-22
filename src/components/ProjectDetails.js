@@ -6,7 +6,7 @@ import './ProjectDetails.css';
 const ProjectDetails = ({ project, onClose }) => {
   const getProjectDetails = (projectTitle) => {
     const details = {
-      'FormJem - Form Builder Platform': {
+      'FormJem': {
         overview: 'FormJem is a comprehensive form builder platform that enables businesses to create, manage, and analyze forms with advanced marketing integrations.',
         features: [
           'Drag-and-drop form builder with intuitive interface',
@@ -34,7 +34,7 @@ const ProjectDetails = ({ project, onClose }) => {
           'Added comprehensive data encryption and privacy controls'
         ]
       },
-      'Habbitable - Habit Tracking App': {
+      'Habbitable': {
         overview: 'A Flutter-based mobile application for habit tracking with a separate NestJS backend, featuring real-time synchronization and comprehensive analytics.',
         features: [
           'Habit creation and tracking with customizable categories',
@@ -62,7 +62,7 @@ const ProjectDetails = ({ project, onClose }) => {
           'Built robust error handling and retry mechanisms'
         ]
       },
-      'BudgetFlow - AI-Powered Budget Tracker': {
+      'BudgetFlow': {
         overview: 'A comprehensive budget management mobile app with AI assistance, featuring expense tracking, financial insights, and personalized recommendations.',
         features: [
           'AI-powered expense categorization and insights',
@@ -91,7 +91,7 @@ const ProjectDetails = ({ project, onClose }) => {
           'Built robust financial calculation engine with error handling'
         ]
       },
-      'RootTask - Task Management System': {
+      'RootTask': {
         overview: 'A Next.js-based task management system with React Flow integration, allowing users to create complex workflows with parent-child relationships and team collaboration.',
         features: [
           'Visual task management with React Flow',

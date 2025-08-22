@@ -15,47 +15,55 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'FormJem - Form Builder Platform',
-      description: 'A drag-and-drop form builder with marketing platform integrations for lead generation and business automation.',
+      title: 'FormJem',
+      subtitle: 'Advanced Form Builder Platform',
+      description: 'Transform your lead generation with this powerful drag-and-drop form builder. Seamlessly integrates with major marketing platforms including Facebook, TikTok, and Google Ads.',
       image: '/img/port1.jpg',
       tech: ['React.js', 'Node.js', 'Marketing APIs', 'Lead Generation'],
       liveUrl: 'https://formjem.com',
       githubUrl: null,
-      category: 'Web App',
-      type: 'live'
+      category: 'SaaS Platform',
+      type: 'live',
+      status: 'Live & Active'
     },
     {
-      title: 'Habbitable - Habit Tracking App',
-      description: 'A Flutter-based mobile application for habit tracking with separate backend and frontend architecture.',
+      title: 'Habbitable',
+      subtitle: 'Smart Habit Tracking App',
+      description: 'A beautifully crafted Flutter mobile app that helps users build lasting habits. Features real-time synchronization and comprehensive progress analytics.',
       image: '/img/port2.jpg',
-      tech: ['Flutter', 'NestJS', 'TypeScript', 'Mobile Development'],
+      tech: ['Flutter', 'NestJS', 'TypeScript', 'Real-time Sync'],
       liveUrl: null,
       githubUrl: {
         frontend: 'https://github.com/saifullahsaeed/habbitable',
         backend: 'https://github.com/saifullahsaeed/habit-planner'
       },
       category: 'Mobile App',
-      type: 'github'
+      type: 'github',
+      status: 'Open Source'
     },
     {
-      title: 'BudgetFlow - AI-Powered Budget Tracker',
-      description: 'A comprehensive budget management mobile app with AI assistance, expense tracking, and personalized financial insights.',
+      title: 'BudgetFlow',
+      subtitle: 'AI-Powered Financial Assistant',
+      description: 'Revolutionary budget tracking app with AI-driven insights. Provides personalized financial advice and optimization suggestions to help users achieve their financial goals.',
       image: '/img/port3.jpg',
-      tech: ['Flutter', 'AI/ML', 'Financial Tech', 'Play Store'],
+      tech: ['Flutter', 'AI/ML', 'OpenAI API', 'Financial Analytics'],
       liveUrl: 'https://play.google.com/store/apps/details?id=com.pynese.expense_tracker',
       githubUrl: null,
-      category: 'Mobile App',
-      type: 'playstore'
+      category: 'FinTech App',
+      type: 'playstore',
+      status: 'Published'
     },
     {
-      title: 'RootTask - Task Management System',
-      description: 'A Next.js-based task management system with React Flow integration, allowing users to create parent-child card relationships and team collaboration.',
+      title: 'RootTask',
+      subtitle: 'Visual Task Management System',
+      description: 'Next-generation task management with React Flow visualization. Create complex workflows with parent-child relationships and collaborate with your team in real-time.',
       image: '/img/port4.jpg',
-      tech: ['Next.js', 'React Flow', 'Task Management', 'Team Collaboration'],
+      tech: ['Next.js', 'React Flow', 'Real-time Collaboration', 'Workflow Engine'],
       liveUrl: 'https://roottask.vercel.app',
       githubUrl: 'https://github.com/saifullahsaeed/roottask',
-      category: 'Web App',
-      type: 'live'
+      category: 'Productivity Tool',
+      type: 'live',
+      status: 'Live Demo'
     }
   ];
 
@@ -80,7 +88,9 @@ const Projects = () => {
     }
   };
 
-
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
 
   return (
     <section id="projects" className="projects" ref={ref}>
@@ -93,7 +103,7 @@ const Projects = () => {
         >
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle">
-            Showcasing my best work across different technologies and domains
+            Real-world applications that solve complex problems and deliver exceptional user experiences
           </p>
         </motion.div>
         
@@ -110,7 +120,7 @@ const Projects = () => {
               variants={itemVariants}
               whileHover={{ y: -10 }}
               transition={{ duration: 0.3 }}
-              onClick={() => setSelectedProject(project)}
+              onClick={() => handleProjectClick(project)}
               style={{ cursor: 'pointer' }}
             >
               <div className="project-image">
@@ -126,6 +136,7 @@ const Projects = () => {
                         className="project-link"
                         target="_blank" 
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -138,6 +149,7 @@ const Projects = () => {
                         className="project-link"
                         target="_blank" 
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -150,6 +162,7 @@ const Projects = () => {
                         className="project-link"
                         target="_blank" 
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         title="Frontend Repository"
@@ -163,6 +176,7 @@ const Projects = () => {
                         className="project-link"
                         target="_blank" 
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         title="Available on Play Store"
@@ -175,7 +189,11 @@ const Projects = () => {
               </div>
               
               <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
+                <div className="project-header">
+                  <h3 className="project-title">{project.title}</h3>
+                  <span className="project-status">{project.status}</span>
+                </div>
+                <h4 className="project-subtitle">{project.subtitle}</h4>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
                   {project.tech.map((tech, techIndex) => (
@@ -186,10 +204,10 @@ const Projects = () => {
                 </div>
                 {project.githubUrl && typeof project.githubUrl === 'object' && (
                   <div className="project-repos">
-                    <a href={project.githubUrl.frontend} target="_blank" rel="noopener noreferrer" className="repo-link">
+                    <a href={project.githubUrl.frontend} target="_blank" rel="noopener noreferrer" className="repo-link" onClick={(e) => e.stopPropagation()}>
                       Frontend Repository
                     </a>
-                    <a href={project.githubUrl.backend} target="_blank" rel="noopener noreferrer" className="repo-link">
+                    <a href={project.githubUrl.backend} target="_blank" rel="noopener noreferrer" className="repo-link" onClick={(e) => e.stopPropagation()}>
                       Backend Repository
                     </a>
                   </div>

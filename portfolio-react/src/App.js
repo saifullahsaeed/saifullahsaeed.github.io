@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,21 +17,26 @@ function App() {
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
-      once: true
+      once: true,
+      offset: 100
     });
   }, []);
 
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Resume />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Contact />
+          <Resume />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
